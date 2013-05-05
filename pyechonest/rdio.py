@@ -57,10 +57,10 @@ class RdioCatalog(object):
     """
     return "%s:track:%s" % (self.region, rdio_track_key)
 
-  def get_artist_id(self, echo_artist_object):
+  def get_artist_key(self, echo_artist_object):
     """
-    @param echo_artist_object: pyechonest Artist object
-    @return: An Rdio artist key key from an EchoNest Artist.
+    @param echo_artist_object: Pyechonest Artist object
+    @return: An Rdio artist key (string version) from an EchoNest Artist.
     """
     try:
       # Call API
@@ -81,7 +81,7 @@ class RdioCatalog(object):
 
   def get_track_key(self, echonest_song_object):
     """
-    @param echonest_song_object:  A PyEchonest Song object.
+    @param echonest_song_object:  A Pyechonest Song object.
     @return: An Rdio track key
     """
     try:
